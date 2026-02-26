@@ -3,13 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My App</title>
+<title>Skill2Income</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="app">
-    <h1>Hello World!</h1>
+
+<header>
+  <div class="logo">Skill2Income</div>
+  <button class="cta-btn" onclick="scrollToApp()">Get Started</button>
+</header>
+
+<section class="hero">
+  <h1>Turn Your Skills Into Income</h1>
+  <p>Enter your skill and discover powerful earning opportunities instantly.</p>
+  <button class="primary-btn" onclick="scrollToApp()">Generate Ideas</button>
+</section>
+
+<section class="how-it-works">
+  <h2>How It Works</h2>
+  <div class="steps">
+    <div class="card">1️⃣ Enter Your Skill</div>
+    <div class="card">2️⃣ Select Category</div>
+    <div class="card">3️⃣ Get Income Ideas</div>
   </div>
-  <script src="script.js"></script>
+</section>
+
+<section id="app" class="app-section">
+  <h2>Generate Income Ideas</h2>
+
+  <input type="text" id="skillInput" placeholder="Enter your skill (e.g. video editing)">
+  
+  <select id="categorySelect">
+    <option value="freelancing">Freelancing</option>
+    <option value="business">Business</option>
+    <option value="content">Content Creation</option>
+    <option value="passive">Passive Income</option>
+  </select>
+
+  <button class="generate-btn" onclick="generateIdeas()">Generate</button>
+
+  <div id="results" class="results"></div>
+</section>
+
+<footer>
+  © 2026 Skill2Income | Built for Future Founders 🚀
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
