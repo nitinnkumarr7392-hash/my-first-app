@@ -6,6 +6,85 @@ body {
   text-align: center;
 }
 
-#app {
-  padding: 50px;
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #111827;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.cta-btn, .primary-btn, .generate-btn {
+  background: linear-gradient(45deg, #7f5af0, #2cb67d);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.cta-btn:hover, .primary-btn:hover, .generate-btn:hover {
+  transform: scale(1.05);
+}
+
+.hero {
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+}
+
+.how-it-works {
+  padding: 40px 20px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1f2937;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.app-section {
+  padding: 50px 20px;
+}
+
+input, select {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 6px;
+  border: none;
+  width: 250px;
+}
+
+.results {
+  margin-top: 30px;
+}
+
+.result-card {
+  background: #1f2937;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: #111827;
 }
