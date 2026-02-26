@@ -1,52 +1,109 @@
-function scrollToApp() {
-  document.getElementById("app").scrollIntoView({ behavior: "smooth" });
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+  color: white;
+  text-align: center;
 }
 
-function generateIdeas() {
-  const skill = document.getElementById("skillInput").value.trim();
-  const category = document.getElementById("categorySelect").value;
-  const resultsDiv = document.getElementById("results");
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #111827;
+}
 
-  if (!skill) {
-    alert("Please enter a skill.");
-    return;
-  }
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+}
 
-  resultsDiv.innerHTML = "";
+.cta-btn, .primary-btn, .generate-btn {
+  background: linear-gradient(45deg, #7f5af0, #2cb67d);
+  border: none;
+  padding: 12px 25px;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
-  const ideasDatabase = {
-    freelancing: [
-      `Offer ${skill} services on Fiverr`,
-      `Start freelancing ${skill} on Upwork`,
-      `Provide consulting in ${skill}`,
-      `Create gig packages for ${skill}`
-    ],
-    business: [
-      `Start a small business using ${skill}`,
-      `Sell digital products related to ${skill}`,
-      `Create paid workshops for ${skill}`,
-      `Build a startup around ${skill}`
-    ],
-    content: [
-      `Start YouTube channel teaching ${skill}`,
-      `Create Instagram content about ${skill}`,
-      `Launch a blog on ${skill}`,
-      `Make short-form videos on ${skill}`
-    ],
-    passive: [
-      `Sell online course on ${skill}`,
-      `Create ebook about ${skill}`,
-      `Build automated digital assets with ${skill}`,
-      `Start affiliate marketing related to ${skill}`
-    ]
-  };
+.cta-btn:hover, .primary-btn:hover, .generate-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(124, 90, 240, 0.7);
+}
 
-  const selectedIdeas = ideasDatabase[category];
+.hero {
+  padding: 80px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  animation: fadeIn 1s ease-in;
+}
 
-  selectedIdeas.forEach(idea => {
-    const div = document.createElement("div");
-    div.className = "result-card";
-    div.innerText = idea;
-    resultsDiv.appendChild(div);
-  });
+.hero h1 {
+  font-size: 38px;
+}
+
+.how-it-works {
+  padding: 50px 20px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1f2937;
+  padding: 25px;
+  border-radius: 12px;
+  width: 220px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.app-section {
+  padding: 60px 20px;
+}
+
+input, select {
+  padding: 12px;
+  margin: 10px;
+  border-radius: 8px;
+  border: none;
+  width: 260px;
+}
+
+.results {
+  margin-top: 30px;
+}
+
+.result-card {
+  background: #1f2937;
+  margin: 12px auto;
+  padding: 18px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 520px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.result-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(44, 182, 125, 0.5);
+}
+
+footer {
+  margin-top: 50px;
+  padding: 25px;
+  background: #111827;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
